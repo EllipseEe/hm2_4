@@ -37,7 +37,7 @@
 
 # S = int(input('Введите сумму чисел: '))
 # P = int(input('Введите произведение чисел: '))
-#
+
 # X = (S-int((S**2-4*P)**0.5))//2
 # Y = S - X
 # if X<=1000 and Y<=1000:
@@ -55,34 +55,22 @@
 #     print(k,end=' ')
 #     k=k*2
 
-#hm_4
+#homework_4
+
+
 #Задача 22: Даны два неупорядоченных набора целых чисел (может быть, с повторениями).
 #Выдать без повторений в порядке возрастания все те числа, которые встречаются в обоих наборах.
 #Пользователь вводит 2 числа. n – кол – во элементов первого  множества. m – кол – во элементов второго множества.
 #Затем пользователь вводит сами элементы множеств. (Попробуйте использовать множества и их пересечение).
 
+# from random import randint
 
-#mol = [int(x) for x in input().split()]
-#n = mol[0]
-#m = mol[1]
-#myset_1 = set()
-#myset_2 = set()
-#list_1 = list()
-#a = [int(x) for x in input().split()]
-#k = set(a)
-#for i in k:
-#    myset_1.add(i)
-#b = [int(x) for x in input().split()]
-#k1 = set(b)
-#for i in k1:
-#    myset_2.add(i)
-#lok = myset_1 & myset_2
-#kool = list(lok)
-#kool.sort()
-#for i in kool:
-#    print(i, end=' ')
-
-
+# n_set = set(randint(1, 20) for i in range(int(input('Введите количество элементов первого множества: '))))
+# print(n_set)
+# m_set = set(randint(1, 20) for i in range(int(input('Введите количество элементов второго множества: '))))
+# print(m_set)
+# s_set = sorted(n_set.intersection(m_set))
+# print(s_set)
 
 #Задача 24: В фермерском хозяйстве в Карелии выращивают чернику.
 #Она растет на круглой грядке, причем кусты высажены только по окружности.
@@ -95,14 +83,15 @@
 #находясь перед некоторым кустом заданной во входном файле грядки.
 
 
-#n = int(input())
-#arr = list()
-#for i in range(n):
-#    x = int(input())
-#    arr.append(x)
-#
-#arr_count = list()
-#for i in range(len(arr) - 1):
-#    arr_count.append(arr[i - 1] + arr[i] + arr[i + 1])
-#arr_count.append(arr[-2] + arr[-1] + arr[0])
-#print(max(arr_count))
+# from random import randint
+# list_1 = list(randint(1, 5) for i in range(int(input("Введите кол-во кустов: "))))
+# print(list_1)
+# a = int(input("Введите № куста: "))
+# res = 0
+# if a == 1:
+#  res = list_1[0] + list_1[1] + list_1[-1]
+# elif a == len(list_1):
+#  res = list_1[-2] + list_1[-1] + list_1[0]
+# else:
+#  res = list_1[a-1] + list_1[a-2] + list_1[a]
+# print(res, "ягод")
